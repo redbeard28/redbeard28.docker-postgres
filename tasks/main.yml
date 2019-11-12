@@ -6,7 +6,7 @@
     name: '{{ ENV_POSTGRES_CONTAINER_NAME }}'
     recreate: true
     restart_policy: always
-    image: postgres
+    image: '{{ DOCKER_IMAGE }}'
     env:
       POSTGRES_PASSWORD: "${ENV_POSTGRES_PASSWORD}"
     published_ports:
