@@ -1,0 +1,17 @@
+---
+- name: "Creates main path of containers host volumes"
+  file:
+    path: "{{ ENV_MAIN_PATH }}"
+    state: directory
+    recurse: yes
+
+
+- name: "Creates postgresql directory"
+  file:
+    path: "{{ item }}"
+    state: directory
+    recurse: yes
+  with_items:
+    - "{{ ENV_POSTGRES_PATH_PGDATA }}"
+
+# TODO: Templating files for rundeck

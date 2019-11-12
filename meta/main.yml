@@ -1,0 +1,15 @@
+galaxy_info:
+  author: Jérémie CUADRADO <redbeard28>
+  description: Simple playbook to launch postgreSQL container
+  company: RedBeard-consulting
+
+  license: license (GPLv2, CC-BY, etc)
+
+  min_ansible_version: 2.4
+
+  galaxy_tags:
+    postgresql
+    ansible
+
+dependencies:
+  redbeard28.docker

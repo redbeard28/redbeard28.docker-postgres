@@ -1,0 +1,15 @@
+---
+- include_tasks: setup_folders_host.yml
+
+- name: "Run PostgreSQL Container"
+  docker_container:
+    name: '{{ ENV_POSTGRES_CONTAINER_NAME }}'
+    recreate: true
+    restart_policy: always
+    image: postgres
+    env:
+      POSTGRES_PASSWORD: "${ENV_POSTGRES_PASSWORD}"
+    published_ports:
+      - "{{ ENV_RPOSTGRES_PORT }}:5432"
+    volumes:
+      - "{{ ENV_POSTGRES_PATH_PGDATA }}:/var/lib/postgresql/data"

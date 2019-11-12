@@ -1,0 +1,5 @@
+---
+ENV_POSTGRES_CONTAINER_NAME: 'mynew-db'
+ENV_POSTGRES_PASSWORD: 'mybigsecretpassword'
+ENV_MAIN_PATH: '/opt/containers'
+ENV_POSTGRES_PATH_PGDATA: '{{ ENV_MAIN_PATH }}/postgres/pg-data'
