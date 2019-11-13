@@ -10,6 +10,6 @@
     env:
       POSTGRES_PASSWORD: "${ENV_POSTGRES_PASSWORD}"
     published_ports:
-      - "{{ ENV_RPOSTGRES_PORT }}:5432"
+      - "{{ ENV_POSTGRES_PORT }}:5432"
     volumes:
       - "{{ ENV_POSTGRES_PATH_PGDATA }}:/var/lib/postgresql/data"
